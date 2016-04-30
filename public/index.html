@@ -1,15 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="alurapic">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>Alurapic</title>
+        <title>AluraPic | Curso de AngularJS</title>
+
+        <script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+
+
+        <!-- CONTROLLERS -->  
+        <script src="js/controllers/fotos-controllers.js"></script>
+
+
+        <!-- DIRETIVAS -->  
+        <script src="js/directives/minhas-diretivas.js"></script>        
+
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/extras.css">
+        <link rel="shortcut icon" href="favicon.ico" />
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+    <body ng-controller="FotosController">
         <div class="container">
-            <h1 class="text-center">Alurapic</h1>
+
+            <div class="jumbotron">
+                <h1 class="text-center">AluraPic</h1>
+            </div>
+
+            <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}">
+                <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
+            </meu-painel>
+            </div>
+
         </div> <!-- fim container -->        
     </body>
 </html>

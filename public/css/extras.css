@@ -3,6 +3,7 @@ body {
     width: 100%;
     min-height: 100%;
     min-width: 100%;
+    font-family: 'Open Sans', sans-serif!important;
 }
 body {
     background: url(https://www.alura.com.br/assets/img/home/background-cidade-fundo.1461085672.svg) bottom no-repeat!important;
@@ -21,7 +22,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    background: white;
+    background: none;
     color: #fd5a5b;
     border-radius: 0!important;
     padding: 0!important;
@@ -29,24 +30,36 @@ body {
     margin-bottom: 0;
 }
 .jumbotron h1 {
-    margin: 10px 0;
+    margin: 5px 0;
     font-size: 2.5em;
     text-align: center;
     padding: 10px 6%;
     color: #517fa4;
     text-transform: uppercase;
-    background: url(https://www.alura.com.br/assets/img/alura-logo.1460494415.svg) center center no-repeat;
+    background: url(https://www.caelum.com.br/imagens/caelum-logo.svg) center center no-repeat;
+    background-size: 12.5%;
     text-indent: -9999px;
 }
 .row {
     margin: 0;
 }
 body > div.container {
-    margin: 87px auto 0 auto;
+    margin: 75px auto 0 auto;
     padding: 0;
     box-shadow: 0px 0px 6px #000;
     background: white;
 }
+
+.col-md-4  {
+    padding: 0;
+}
+
+.panel.panel-default {
+    margin: 0!important;
+    border: 0!important;
+}
+
+
 meu-painel {
     padding: 0!important;
 }
@@ -54,11 +67,10 @@ meu-painel > div {
     border: none!important;
     margin: 0!important;
 }
-.panel-default>.panel-heading {
-    background: rgba(0, 0, 0, 0.3);
+.panel-default > .panel-heading {
+    background: rgba(0, 0, 0, 0.2);
     color: white;
     text-transform: uppercase;
-    /* position: absolute; */
     bottom: 0;
     left: 0;
     border: none;
@@ -72,16 +84,20 @@ meu-painel > div {
     transition: all 0.4s ease!important;
     cursor: pointer
 }
-.panel-default>.panel-heading:hover {
+.panel-default > .panel-heading:hover {
     background: rgba(0, 0, 0, 0);
 }
-.panel-default >.panel-heading > h3 {
-    font-size: 1.7em;
+.panel-default > .panel-heading > h3 {
+    font-size: 1.3em;
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 0px;
     display: inline-block;
     text-align: left;
+    font-weight: bold;
+    /*text-shadow: 1px 1px 1px #444;*/
+    background: rgba(253, 193, 74, 0.9);
+    padding: 7px 20px
 }
 
 .page-header {
