@@ -3,14 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <base href="/">
         <title>AluraPic | Curso de AngularJS</title>
 
         <script type="text/javascript" src="js/lib/angular.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular-animate.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
+        <script type="text/javascript" src="js/lib/angular.min.js.map"></script>
+        <script type="text/javascript" src="js/lib/angular-animate.min.js.map"></script>
+        <script type="text/javascript" src="js/lib/angular-route.min.js.map"></script>
         <script type="text/javascript" src="js/main.js"></script>
 
 
         <!-- CONTROLLERS -->  
         <script src="js/controllers/fotos-controllers.js"></script>
+        <script src="js/controllers/cadastro-controllers.js"></script>
 
 
         <!-- DIRETIVAS -->  
@@ -26,14 +33,7 @@
     <body ng-controller="FotosController">
         <div class="container">
 
-            <div class="jumbotron">
-                <h1 class="text-center">AluraPic</h1>
-            </div>
-
-            <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}">
-                <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
-            </meu-painel>
-            </div>
+            <ng-view></ng-view>
 
         </div> <!-- fim container -->        
     </body>

@@ -36,8 +36,8 @@ body {
     padding: 10px 6%;
     color: #517fa4;
     text-transform: uppercase;
-    background: url(https://www.caelum.com.br/imagens/caelum-logo.svg) center center no-repeat;
-    background-size: 12.5%;
+    background: url(https://www.alura.com.br/assets/img/alura-logo.1462505277.svg) center center no-repeat;
+    background-size: 7.5%;
     text-indent: -9999px;
 }
 .row {
@@ -120,7 +120,7 @@ form[name*="formulario"] {
 
 #filtrar {
     display: block;
-    padding: 20px 0;
+    padding: 15px 0 0 0;
     background: #4dba7a;
 }
 #filtrar input.form-control {
@@ -192,25 +192,20 @@ form[name*='formulario'] minha-foto img {
 
 /***********************************************/
 
-.painel-animado.ng-leave-active {
-    -webkit-transform: scale(0.1);
-    -moz-transform: scale(0.1);
-    -o-transform: scale(0.1);
-    -ms-transform: scale(0.1);
-    transform: scale(0.1);
-}
-.painel-animado-opacity.ng-leave-active {
-    -webkit-filter: opacity(0);
-}
+
 .painel-animado {
-    -webkit-transition: all 0.8s ease!important;
-    -moz-transition: all 0.8s ease!important;
-    -o-transition: all 0.8s ease!important;
-    transition: all 0.8s ease!important;
-}
-.painel-animado-opacity {
     -webkit-transition: all 0.4s ease!important;
     -moz-transition: all 0.4s ease!important;
     -o-transition: all 0.4s ease!important;
     transition: all 0.4s ease!important;
+}
+
+.painel-animado.ng-leave-active {
+    -webkit-filter: opacity(0);
+}
+.painel-animado.ng-enter {
+    -webkit-filter: opacity(0);
+}
+.painel-animado.ng-enter.ng-enter-active {
+    -webkit-filter: opacity(1);
 }
